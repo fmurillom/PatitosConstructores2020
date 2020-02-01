@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FA69C5A4-9470-02B9-244C-66BA482F4FE9}</ProjectGuid>
+    <ProjectGuid>{a4c569fa-7094-b902-244c-66ba482f4fe9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,6 +47,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -84,6 +85,17 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/mariaavila/PatitosConstructores2020/RataKart 8 Deluxe/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+=======
+     <Compile Include="Assets\RPG Food &amp; Drinks Pack\Assets\Scripts\Consumer.cs" />
+     <Compile Include="Assets\RPG Food &amp; Drinks Pack\Assets\Scripts\Rotator.cs" />
+     <Compile Include="Assets\Scripts\HelloWorld.cs" />
+     <Compile Include="Assets\Scripts\Move.cs" />
+     <Compile Include="Assets\Scripts\Mover.cs" />
+     <None Include="Assets\Fruit Pack\Shaders\ToonLitTransparent.shader" />
+     <None Include="Assets\Fruit Pack\Shaders\ToonLit.shader" />
+ <Reference Include="UnityEngine">
+ <HintPath>/Users/abstractize/Documents/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
+>>>>>>> release
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -607,6 +619,52 @@
  <Reference Include="mscorlib">
  <HintPath>/Applications/Unity/Hub/Editor/2019.2.17f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{7ea3dc05-e69f-d1cb-4e80-12b4203f499c}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{58556044-5ac2-90a9-9de5-5c964957fa05}</Project>
+      <Name>Cinemachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{dce39050-a914-b489-117c-de1cfdb4fa2a}</Project>
+      <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{46ff485b-27d4-9ce2-ebf6-c3badcd6fad2}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{87d68ba1-5057-ad75-4f1f-a72db66b4485}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{8f1644ae-39f7-01bd-76f0-770b8972821c}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
+      <Project>{51589a85-8585-bdda-4753-5cb938806eab}</Project>
+      <Name>Unity.CollabProxy.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{8f3cd364-124f-c235-17f6-0d0b7d6aa020}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{e20a7338-648c-a743-06a6-17f1f0edff05}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{0978da71-375b-9894-e143-c1b9ba669d10}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{fc73833e-fdc9-3a66-70d1-f0ef5a176d7d}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
