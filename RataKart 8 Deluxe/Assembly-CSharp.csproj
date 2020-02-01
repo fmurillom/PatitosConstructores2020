@@ -49,6 +49,7 @@
      <Compile Include="Assets\RPG Food &amp; Drinks Pack\Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\HelloWorld.cs" />
      <Compile Include="Assets\Scripts\Move.cs" />
+     <Compile Include="Assets\Scripts\Mover.cs" />
      <None Include="Assets\Fruit Pack\Shaders\ToonLitTransparent.shader" />
      <None Include="Assets\Fruit Pack\Shaders\ToonLit.shader" />
  <Reference Include="UnityEngine">
