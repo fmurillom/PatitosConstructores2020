@@ -1,55 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Move : MonoBehaviour
 {
-    //Velocidad de moviemiento de personaje
-    public float speed = 1;
-    //Nivel
-    int level = 0;
-    //Rigidbody
+    public Transform goal;
+    NavMeshAgent agent;
+    public float horizontalMove;
     Rigidbody rb;
-
-    private void Awake()
+    public float speed;
+    Quaternion rotatePos;
+    Vector3 movePos;
+    public float rotationSpeed;
+    void Start()
     {
         rb = GetComponent<Rigidbody>();
+        agent = GetComponent<NavMeshAgent>();
     }
-    // Use this for initialization
-    void Start ()
+    private void FixedUpdate()
     {
-
-    }
-	
-	// Update is called once per frame
-	void FixedUpdate ()
-    {
-        AxisInput();
-    }
-
-    //Teclado
-    //Otra Manera de Hacerlo
-    void AxisInput()
-    {
-        //Forward
-        if (Input.GetKey(KeyCode.W))
-        {
-            rb.MovePosition(rb.position + Vector3.forward * speed);
+        if (Input.touchCount > 0){
+            float width = Screen.width;
+            Touch touch = Input.GetTouch(0);
+            horizontalMove = (touch.position.x - width/2)/(width/2);
+            transform.Translate(new Vector3(),Space.Self);
         }
-        //Back
-        if (Input.GetKey(KeyCode.S))
-        {
-            rb.MovePosition(rb.position + Vector3.back * speed);
+        else{
+            horizontalMove = 0;
+            agent.destination = goal.position;
         }
-        //Left
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb.MoveRotation(rb.rotation * Quaternion.Euler(Vector3.up));
-        }
-        //Right
-        if (Input.GetKey(KeyCode.D))
-        {
-            rb.MovePosition(rb.position + Vector3.right * speed);
-        }
+        rotatePos = Quaternion.Euler(0.0f, horizontalMove * rotationSpeed, 0.0f);
+        rb.MoveRotation(transform.rotation * rotatePos);
+        
     }
 }
