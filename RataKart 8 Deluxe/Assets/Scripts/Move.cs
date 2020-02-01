@@ -23,7 +23,7 @@ public class Move : MonoBehaviour
         if (Input.touchCount > 0){
             float width = Screen.width;
             Touch touch = Input.GetTouch(0);
-            horizontalMove = (touch.position.x - width/2)/(width/2);
+            horizontalMove = ((touch.position.x - width/2)/(width/2)) * 2;
             transform.Translate(new Vector3(),Space.Self);
         }
         else{
