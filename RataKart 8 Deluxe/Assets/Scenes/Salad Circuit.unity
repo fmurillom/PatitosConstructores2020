@@ -107,7 +107,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 5.2
+    agentSlope: 2.5
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -25634,6 +25634,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Saladtext
       objectReference: {fileID: 0}
+    - target: {fileID: -292569331923570223, guid: 7eb84f46f4f394e43b8a0b87fd6271c1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5087837288691511098, guid: 7eb84f46f4f394e43b8a0b87fd6271c1,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -25647,7 +25652,7 @@ PrefabInstance:
     - target: {fileID: 6921263136071265114, guid: 7eb84f46f4f394e43b8a0b87fd6271c1,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb84f46f4f394e43b8a0b87fd6271c1, type: 3}
