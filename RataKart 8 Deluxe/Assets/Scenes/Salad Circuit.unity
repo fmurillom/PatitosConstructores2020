@@ -1998,7 +1998,7 @@ GameObject:
   - component: {fileID: 119432967}
   m_Layer: 0
   m_Name: Cube (31)
-  m_TagString: Waypoints
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9019,6 +9019,7 @@ PlayableDirector:
     m_References:
     - 074664ff99ece4cf0a3dc9a64de050a9: {fileID: 1811992431}
     - c3b9f93c09089422aa7ad08e936ca0df: {fileID: 1431397079}
+    - 6cb7bb0a491014b5dae5a1691d732650: {fileID: 1431397079}
     - fcdf34da8c8044ce1ac23f8d806a5f5f: {fileID: 1867646214}
     - 7d7312dc464364dd48fa1e0b8d59c9b1: {fileID: 1425528277}
 --- !u!4 &573136490
@@ -10615,6 +10616,7 @@ MonoBehaviour:
   - {fileID: 1177435374}
   - {fileID: 144187176}
   - {fileID: 119432966}
+  phaseDisplayText: 
 --- !u!195 &662106248
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -23975,7 +23977,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431397078}
-  m_LocalRotation: {x: 0.14521314, y: 2.429395e-17, z: -1.6552527e-16, w: 0.9894004}
+  m_LocalRotation: {x: 0.14521314, y: -4.8242388e-17, z: 3.2869648e-16, w: 0.9894004}
   m_LocalPosition: {x: 79.4, y: 43.983, z: 173.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -32161,8 +32163,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899463570}
-  m_LocalRotation: {x: 0.14521314, y: 2.429395e-17, z: -1.6552527e-16, w: 0.9894004}
-  m_LocalPosition: {x: 79.4, y: 43.983, z: 173.43}
+  m_LocalRotation: {x: 0.6055353, y: 0.2055501, z: -0.085851416, w: 0.9894004}
+  m_LocalPosition: {x: -37.9, y: 104.7, z: 47.070007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 434250880}
