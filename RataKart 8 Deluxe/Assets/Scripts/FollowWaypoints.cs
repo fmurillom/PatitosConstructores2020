@@ -8,17 +8,37 @@ using System.Collections;
 public class FollowWaypoints : MonoBehaviour
 {
 
-    public Transform[] points;
+    private Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
 
     public string phaseDisplayText = "";
     private Touch theTouch;
 
+    private GameObject waypoints;
+
+    private GameObject[] cubes;
+
 
 
     void Start()
     {
+
+        points  = new Transform[32];
+        
+        waypoints = GameObject.Find("Cube");
+
+        points[0] = waypoints.GetComponent<Transform>();
+
+        for (int i = 1; i < 32; i++)
+        {
+            string name = "Cube (" + i.ToString() + ")";
+            waypoints = GameObject.Find(name);
+
+            points[i] = waypoints.GetComponent<Transform>();
+
+        }
+
         agent = GetComponent<NavMeshAgent>();
 
         // Disabling auto-braking allows for continuous movement
@@ -29,7 +49,6 @@ public class FollowWaypoints : MonoBehaviour
         agent.destination = points[destPoint].position;
 
         agent.updateRotation = true;
-
     }
 
 
@@ -37,11 +56,13 @@ public class FollowWaypoints : MonoBehaviour
     {
         // Returns if no points have been set up
 
-        destPoint = destPoint + 1;
+
 
         if ( (destPoint + 1) == points.Length)
         {
             destPoint = 0;
+        }else{
+            destPoint = destPoint + 1;
         }
 
         // Set the agent to go to the currently selected destination.
