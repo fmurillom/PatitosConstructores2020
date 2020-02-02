@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\CarSelection.cs" />
      <Compile Include="Assets\Scripts\FollowWaypoints.cs" />
      <Compile Include="Assets\Scripts\HelloWorld.cs" />
+     <Compile Include="Assets\Scripts\Kart.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Move.cs" />
      <Compile Include="Assets\Scripts\Mover.cs" />

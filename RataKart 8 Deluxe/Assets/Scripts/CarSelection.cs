@@ -23,9 +23,9 @@ public class CarSelection : MonoBehaviour
     private int CartInt = 1;
     private int HelmInt = 1;
 
-    public CarSelection(){
-        KartInfo.helm = BlueHelm;
-        KartInfo.kart = Cart;
+    public void Awake(){
+        KartInfo.helm = BlueHelm3D;
+        KartInfo.kart = Cart3D;
     }
 
     public void NextHelm(){

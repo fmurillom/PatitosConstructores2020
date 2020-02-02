@@ -7,8 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     public string GameScene = "Car Select";
     public void PlayGame(){
-
         SceneManager.LoadScene(GameScene);
-
     }
 }

@@ -5502,6 +5502,16 @@ MonoBehaviour:
   Cart: {fileID: 1580790275}
   Wagon: {fileID: 240543714}
   Chariot: {fileID: 1345257812}
+  BlueHelm3D: {fileID: -927199367670048503, guid: b521f0f99f9074c81b6b60b48ad7e52c,
+    type: 3}
+  GreenHelm3D: {fileID: -927199367670048503, guid: 7dceade1bae3d4a0fa4f5c5c8f7191c9,
+    type: 3}
+  RedHelm3D: {fileID: -927199367670048503, guid: 4dd665c516ff5400fbe0cd7324bd6d16,
+    type: 3}
+  Cart3D: {fileID: 2559194256534777521, guid: 8a6ba1acfcdf44abb8a348f5612e2724, type: 3}
+  Wagon3D: {fileID: 6859886240290539845, guid: d59dad64a67db4378aa520634f13cf56, type: 3}
+  Chariot3D: {fileID: 8292767464238286411, guid: 52efce2c0ad1c464985a1b5f6727fd72,
+    type: 3}
 --- !u!1 &1087378925
 GameObject:
   m_ObjectHideFlags: 0
