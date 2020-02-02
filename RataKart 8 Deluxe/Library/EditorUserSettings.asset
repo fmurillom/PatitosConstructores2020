@@ -6,11 +6,7 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     UnityRemoteDevice:
-<<<<<<< Updated upstream
-      value: 5006015500010f0a0b595b77117a594646471a297f292067742f4f64e1e1323ab6be32eae13f6b6b
-=======
       value: 225f4d46245b0d4902070862342649191512
->>>>>>> Stashed changes
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
