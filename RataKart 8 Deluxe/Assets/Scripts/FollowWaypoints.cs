@@ -15,8 +15,9 @@ public class FollowWaypoints : MonoBehaviour
     public string phaseDisplayText = "";
     private Touch theTouch;
 
-    float smooth = 5.0f;
-    float tiltAngle = 60.0f;
+    private float mouseLife = 100.0f;
+    private float cartLife = 100.0f;
+    private float wheelLife = 100.0f;
 
 
     void Start()
@@ -32,7 +33,6 @@ public class FollowWaypoints : MonoBehaviour
 
         agent.updateRotation = true;
 
-        Debug.Log(points.Length);
     }
 
 
@@ -93,5 +93,38 @@ public class FollowWaypoints : MonoBehaviour
             destPoint = 0;
             Debug.Log("Reset");
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        Vector3 hit = collision.contacts[0].normal;
+        float angle = Vector3.Angle(hit, Vector3.up);
+        //Down
+        if (!Mathf.Approximately(angle, 0))
+        {
+
+            float random = Mathf.Round(Random.Range(0, 2));
+
+             Debug.Log("Pene");
+             Debug.Log(mouseLife);
+             Debug.Log(cartLife);
+             Debug.Log(wheelLife);
+
+            if(random == 0)
+            {
+                mouseLife = mouseLife - 5.0f;
+            }
+            if (random == 1)
+            {
+                cartLife = cartLife - 5.0f;
+            }
+            if (random == 2)
+            {
+                wheelLife = wheelLife - 5.0f;
+            }
+        }
+
+        
     }
 }
