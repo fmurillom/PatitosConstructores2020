@@ -57,13 +57,13 @@ public class FollowWaypoints : MonoBehaviour
         // Returns if no points have been set up
 
 
+        destPoint = destPoint + 1;
 
         if ( (destPoint + 1) == points.Length)
         {
             destPoint = 0;
-        }else{
-            destPoint = destPoint + 1;
         }
+
 
         // Set the agent to go to the currently selected destination.
         agent.destination = points[destPoint].position;
