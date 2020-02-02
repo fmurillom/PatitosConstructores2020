@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GameOver.cs" />
      <Compile Include="Assets\RPG Food &amp; Drinks Pack\Assets\Scripts\Consumer.cs" />
      <Compile Include="Assets\RPG Food &amp; Drinks Pack\Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\AttachMusic.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\Scripts\OptionsMenu.cs" />
      <Compile Include="Assets\Scripts\SpawnObjects.cs" />
      <Compile Include="Assets\Scripts\Timeline.cs" />
+     <Compile Include="Assets\SkipButton.cs" />
      <Compile Include="Assets\Speedometer\Speedometer.cs" />
      <Compile Include="Assets\StopMusic.cs" />
      <None Include="Assets\Fruit Pack\Shaders\ToonLitTransparent.shader" />

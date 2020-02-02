@@ -86,7 +86,6 @@ public class FollowWaypoints : MonoBehaviour
         if (Input.touchCount > 0)
         {
             theTouch = Input.GetTouch(0);    
-            Debug.Log(theTouch.position.x);        
 
             if(theTouch.phase == TouchPhase.Stationary)
             {

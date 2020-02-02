@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Kart : MonoBehaviour
 {
     private const float MAX_SPEED_ANGLE = -20;
     private const float ZERO_SPEED_ANGLE = 230;
+
+    public Image MouseBar;
+    public Image CartBar;
+    public Image WheelBar;
 
     private Transform needleTranform;
     private Transform speedLabelTemplateTransform;
@@ -31,7 +36,7 @@ public class Kart : MonoBehaviour
 
     void Update()
     {
-        speed += 30f * Time.deltaTime;
+        speed += 10f * Time.deltaTime;
         if (speed > speedMax) speed = speedMax;
 
         needleTranform.eulerAngles = new Vector3(0, 0, GetSpeedRotation());
@@ -68,14 +73,17 @@ public class Kart : MonoBehaviour
         if (other.transform.tag == "KEZO")
         {
             mouseLife = mouseLife + 5.0f;
+            if (mouseLife > 100f) mouseLife = 100f;
         }
         else if (other.transform.tag == "Bandita")
         {
             wheelLife = wheelLife + 5.0f;
+            if (wheelLife > 100f) wheelLife = 100f;
         }
         else if (other.transform.tag == "Lata")
         {
             cartLife = cartLife + 5.0f;
+            if (cartLife > 100f) cartLife = 100f;
         }
         else
         {
@@ -85,35 +93,36 @@ public class Kart : MonoBehaviour
             if (!Mathf.Approximately(angle, 0))
             {
 
-                float random = Mathf.Round(Random.Range(0, 2));
-
-                Debug.Log(mouseLife);
-                Debug.Log(cartLife);
-                Debug.Log(wheelLife);
+                float random = Mathf.Round(Random.Range(0, 3));
 
                 if (random == 0)
                 {
                     mouseLife = mouseLife - 5.0f;
                     speed -= 90f;
                     if (speed < 0) speed = 0;
-                    if (mouseLife < 0) mouseLife = 0;
+                    if (mouseLife < 0) SceneManager.LoadScene("Game Over");;
                 }
                 if (random == 1)
                 {
                     cartLife = cartLife - 5.0f;
                     speed -= 90f;
                     if (speed < 0) speed = 0;
-                    if (cartLife < 0) cartLife = 0;
+                    if (cartLife < 0) SceneManager.LoadScene("Game Over");;
                 }
                 if (random == 2)
                 {
                     wheelLife = wheelLife - 5.0f;
                     speed -= 90f;
                     if (speed < 0) speed = 0;
-                    if (wheelLife < 0) wheelLife = 0;
+                    if (wheelLife < 0) SceneManager.LoadScene("Game Over");;
                 }
 
             }
         }
+
+        MouseBar.fillAmount = mouseLife / 100f;
+        CartBar.fillAmount = cartLife / 100f;
+        WheelBar.fillAmount = wheelLife / 100f;
+        
     }
 }

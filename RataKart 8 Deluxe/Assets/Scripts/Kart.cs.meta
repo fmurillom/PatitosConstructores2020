@@ -3,7 +3,14 @@ guid: 16588917b3c954697b1a1fdc4e4ed808
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - MouseBar: {fileID: 416713915103600007, guid: a2bec60694f3d4a4cae5b057f3cc30fa,
+      type: 3}
+  - CartBar: {fileID: 5345310541711993478, guid: 1db15ce361e45461cbb0d992ce76ae1b,
+      type: 3}
+  - WheelBar: {fileID: 4700691840984871443, guid: b9e0daeeaef1d4265b9a293ce2682254,
+      type: 3}
+  - Head: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

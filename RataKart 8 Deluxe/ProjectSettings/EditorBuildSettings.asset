@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Salad Circuit.unity
     guid: 14ffab77995b14a2d826a4f7ce0025a3
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 49788fe8d25664ad0a2adf16b8879a94
   m_configObjects: {}
