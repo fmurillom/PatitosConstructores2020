@@ -1,6 +1,7 @@
 ﻿// FollowWaypoints.cs
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using System.Collections;
 
 
@@ -8,8 +9,15 @@ public class FollowWaypoints : MonoBehaviour
 {
 
     public Transform[] points;
-    private int destPoint = 2;
+    private int destPoint = 0;
     private NavMeshAgent agent;
+
+    public string phaseDisplayText = "";
+    private Touch theTouch;
+
+    float smooth = 5.0f;
+    float tiltAngle = 60.0f;
+
 
     void Start()
     {
@@ -21,40 +29,68 @@ public class FollowWaypoints : MonoBehaviour
         agent.autoBraking = false;
 
         agent.destination = points[destPoint].position;
+
+        agent.updateRotation = true;
+
     }
 
 
     void GotoNextPoint()
     {
         // Returns if no points have been set up
-        if (points.Length == 0)
-            return;
+
+        destPoint = destPoint + 1;
+
+        if ( (destPoint + 1) == points.Length)
+        {
+            destPoint = 0;
+        }
 
         // Set the agent to go to the currently selected destination.
         agent.destination = points[destPoint].position;
 
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
-        destPoint = (destPoint + 1) % points.Length;
 
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         // Choose the next destination point when the agent gets
         // close to the current one.
         //if (!agent.pathPending && agent.remainingDistance < 0.5f)
         //GotoNextPoint();
-        Debug.Log(destPoint);
-    }
 
-    private void OnTriggerEnter(Collider other)
+        if (Input.touchCount > 0)
+        {
+            theTouch = Input.GetTouch(0);            
+
+            if(theTouch.phase == TouchPhase.Stationary)
+            {
+                if(theTouch.position.x >= 600)
+                {
+                    transform.Translate(Vector3.right * 10 * Time.deltaTime);
+                }
+                if (theTouch.position.x <= 600)
+                {
+                    transform.Translate(Vector3.left * 10 * Time.deltaTime);
+                }
+            }
+        }
+
+    }
+    private void OnTriggerExit(Collider other)
     {
         if(other.tag == "Waypoints")
         {
             GotoNextPoint();
-            Debug.Log("Coll");
+        }
+
+        if (other.tag == "Goal")
+        {
+            destPoint = 0;
+            Debug.Log("Reset");
         }
     }
 }

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-sceneSetups: []
-=======
 sceneSetups:
 - path: Assets/Scenes/Salad Circuit.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
->>>>>>> release
