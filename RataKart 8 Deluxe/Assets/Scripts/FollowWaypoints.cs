@@ -19,6 +19,8 @@ public class FollowWaypoints : MonoBehaviour
 
     private GameObject[] cubes;
 
+    private int vueltas = 0;
+
 
 
     void Start()
@@ -110,6 +112,7 @@ public class FollowWaypoints : MonoBehaviour
         {
             destPoint = 0;
             Debug.Log("Reset");
+            vueltas = vueltas + 1;
         }
     }
 }
