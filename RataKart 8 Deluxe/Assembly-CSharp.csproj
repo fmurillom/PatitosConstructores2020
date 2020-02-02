@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\RPG Food &amp; Drinks Pack\Assets\Scripts\Consumer.cs" />
      <Compile Include="Assets\RPG Food &amp; Drinks Pack\Assets\Scripts\Rotator.cs" />
+     <Compile Include="Assets\Scripts\Build.cs" />
      <Compile Include="Assets\Scripts\CarSelection.cs" />
      <Compile Include="Assets\Scripts\FollowWaypoints.cs" />
      <Compile Include="Assets\Scripts\HelloWorld.cs" />
