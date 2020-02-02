@@ -2,6 +2,8 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
+    <CscToolPath>/Users/abstractize/Documents/2019.2.17f1/Unity.app/Contents/Tools/RoslynScripts</CscToolPath>
+    <CscToolExe>unity_csc.sh</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -45,9 +47,40 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>/Users/abstractize/Documents/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Users/abstractize/Documents/2019.2.17f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\RPG Food &amp; Drinks Pack\Assets\Scripts\Consumer.cs" />
+     <Compile Include="Assets\RPG Food &amp; Drinks Pack\Assets\Scripts\Rotator.cs" />
+     <Compile Include="Assets\Scripts\AttachMusic.cs" />
+     <Compile Include="Assets\Scripts\Build.cs" />
+     <Compile Include="Assets\Scripts\CarSelection.cs" />
+     <Compile Include="Assets\Scripts\FollowWaypoints.cs" />
+     <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\HelloWorld.cs" />
+     <Compile Include="Assets\Scripts\Kart.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Move.cs" />
+     <Compile Include="Assets\Scripts\Mover.cs" />
+     <Compile Include="Assets\Scripts\OptionsMenu.cs" />
+     <Compile Include="Assets\Scripts\SkipButton.cs" />
+     <Compile Include="Assets\Scripts\SpawnObjects.cs" />
+     <Compile Include="Assets\Scripts\StopMusic.cs" />
+     <Compile Include="Assets\Scripts\Timeline.cs" />
+     <Compile Include="Assets\Speedometer\Speedometer.cs" />
+     <None Include="Assets\Fruit Pack\Shaders\ToonLitTransparent.shader" />
+     <None Include="Assets\Fruit Pack\Shaders\ToonLit.shader" />
+     <None Include="Assets\Racing Flag Animated\shaders\vertex_animation_shader.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/abstractize/Documents/Projects/Games/PatitosConstructores2020/RataKart 8 Deluxe/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>/Users/abstractize/Documents/Projects/Games/PatitosConstructores2020/RataKart 8 Deluxe/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>/Users/abstractize/Documents/Projects/Games/PatitosConstructores2020/RataKart 8 Deluxe/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
@@ -67,14 +100,14 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/abstractize/Documents/Projects/Games/PatitosConstructores2020/RataKart 8 Deluxe/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>/Users/abstractize/Documents/Projects/Games/PatitosConstructores2020/RataKart 8 Deluxe/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>/Users/abstractize/Documents/Projects/Games/PatitosConstructores2020/RataKart 8 Deluxe/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/abstractize/Documents/Projects/Games/PatitosConstructores2020/RataKart 8 Deluxe/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine">
- <HintPath>/Users/abstractize/Documents/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Users/abstractize/Documents/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -247,14 +280,8 @@
  <Reference Include="UnityEngine.XRModule">
  <HintPath>/Users/abstractize/Documents/2019.2.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor">
- <HintPath>/Users/abstractize/Documents/2019.2.17f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Users/abstractize/Documents/2019.2.17f1/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>/Users/abstractize/Documents/2019.2.17f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Common">
  <HintPath>/Users/abstractize/Documents/2019.2.17f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
@@ -606,7 +633,7 @@
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
