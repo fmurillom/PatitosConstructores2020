@@ -94,18 +94,24 @@ public class Kart : MonoBehaviour
                 if (random == 0)
                 {
                     mouseLife = mouseLife - 5.0f;
+                    speed -= 90f;
+                    if (speed < 0) speed = 0;
+                    if (mouseLife < 0) mouseLife = 0;
                 }
                 if (random == 1)
                 {
                     cartLife = cartLife - 5.0f;
+                    speed -= 90f;
+                    if (speed < 0) speed = 0;
+                    if (cartLife < 0) cartLife = 0;
                 }
                 if (random == 2)
                 {
                     wheelLife = wheelLife - 5.0f;
+                    speed -= 90f;
+                    if (speed < 0) speed = 0;
+                    if (wheelLife < 0) wheelLife = 0;
                 }
-
-                speed -= 50f;
-                if (speed < 0) speed = 0;
 
             }
         }
