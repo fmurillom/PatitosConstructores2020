@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\OptionsMenu.cs" />
      <Compile Include="Assets\Scripts\SpawnObjects.cs" />
+     <Compile Include="Assets\Scripts\Timeline.cs" />
      <None Include="Assets\Fruit Pack\Shaders\ToonLitTransparent.shader" />
      <None Include="Assets\Fruit Pack\Shaders\ToonLit.shader" />
      <None Include="Assets\Racing Flag Animated\shaders\vertex_animation_shader.shader" />
