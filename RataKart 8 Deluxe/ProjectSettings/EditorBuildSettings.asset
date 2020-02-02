@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Car Select.unity
     guid: 27587a479480347168f322696fbd0e62
+  - enabled: 1
+    path: Assets/Scenes/Salad Circuit Cine.unity
+    guid: 781591f47409f4e07b43ccd91491bd67
+  - enabled: 1
+    path: Assets/Scenes/Salad Circuit.unity
+    guid: 14ffab77995b14a2d826a4f7ce0025a3
   m_configObjects: {}

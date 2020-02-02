@@ -1,24 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Timeline : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        pause();
-    }
 
-    // Update is called once per frame
-    void Update()
+    void OnEnable()
     {
-        
-    }
-    public void start(){
-        Time.timeScale = 1.0f;
-    }
-    public void pause(){
-        Time.timeScale = 0.0f;
+        // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
+        SceneManager.LoadScene("Salad Circuit", LoadSceneMode.Additive);
     }
 }
