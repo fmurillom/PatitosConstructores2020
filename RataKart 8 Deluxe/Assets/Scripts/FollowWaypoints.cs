@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 public class FollowWaypoints : MonoBehaviour
@@ -98,6 +99,10 @@ public class FollowWaypoints : MonoBehaviour
                     transform.Translate(Vector3.left * 10 * Time.deltaTime);
                 }
             }
+        }
+
+        if (vueltas == 2){
+            SceneManager.LoadScene("You Win");
         }
 
     }
