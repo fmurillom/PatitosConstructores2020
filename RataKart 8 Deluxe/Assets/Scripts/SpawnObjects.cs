@@ -160,7 +160,7 @@ public class SpawnObjects : MonoBehaviour
     {
         Vector3 position = RandomPoint();
         GameObject Boulder = objects[Random.Range(0, 2)];
-        GameObject instance = Instantiate(Boulder, transform.position + position, transform.rotation);
+        GameObject instance = Instantiate(Boulder, new Vector3(transform.position.x, transform.position.y + 5.0f, transform.position.z) + position, transform.rotation);
         Destroy(instance, 10f);
     }
 }
