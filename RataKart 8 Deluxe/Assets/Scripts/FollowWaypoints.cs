@@ -32,7 +32,6 @@ public class FollowWaypoints : MonoBehaviour
 
         agent.updateRotation = true;
 
-        Debug.Log(points.Length);
     }
 
 
